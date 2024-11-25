@@ -1,2 +1,9 @@
-# HighSeas
-Collection of my HighSeas projects - https://highseas.hackclub.com/
+# HighSeas Collection
+Collection of my projects for <a href="https://highseas.hackclub.com/">highseas.hackclub.com</a>
+
+## List of projects
+
+| Project  | Technologies | Upload Date | Repo |
+| ------------- | ------------- | ------------- | ------------- |
+| Landing Page  | HTML, TailwindCSS  | 24/11/2024 | [Here](https://github.com/Ondra9071/HighSeas-Landing-Page)  |
+| Portfolio Template  | HTML, TailwindCSS  | 25/11/2024  | [Here](https://github.com/Ondra9071/HighSeas-PortfolioTemplate)  |
