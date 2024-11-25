@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+    .cta-button { position: relative; z-index: 10; }
+    .wave-background { position: absolute; bottom: 0; left: 0; right: 0; z-index: 1; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<!-- Hero Section -->
+<header class="relative bg-gradient-to-r from-orange-400 via-red-500 to-orange-500 text-white overflow-hidden pb-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-28 flex flex-col lg:flex-row items-center justify-between">
+    <!-- Text Content -->
+    <div class="text-center lg:text-left lg:max-w-xl">
+      <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        Unlock Endless <span class="text-yellow-300">Possibilities</span>
+      </h1>
+      <p class="text-lg lg:text-xl mb-8">
+        Step into a world of innovation and growth. Join us today to embark on your next big journey.
+      </p>
+      <a href="#form-section" class="inline-block bg-yellow-400 text-gray-800 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 focus:ring-4 focus:ring-yellow-300 focus:outline-none transition duration-300 cta-button">
+        Get Started Now
+      </a>
+    </div>
+    <!-- Illustration -->
+    <div class="mt-10 lg:mt-0">
+      <img src="https://via.placeholder.com/500x400?text=Your+Image+Here" alt="Hero Illustration" class="w-full max-w-lg lg:max-w-xl mx-auto lg:ml-12 rounded-lg shadow-lg">
+    </div>
+  </div>
+  <!-- Decorative wave -->
+  <div class="wave-background">
+    <svg viewBox="0 0 1440 320" class="w-full h-auto">
+      <path fill="#ffffff" fill-opacity="1" d="M0,96L48,106.7C96,117,192,139,288,149.3C384,160,480,160,576,149.3C672,139,768,117,864,101.3C960,85,1056,75,1152,80C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</header>
+
+  <!-- Form Section -->
+  <section id="form-section" class="py-16 bg-white mt-[-60px]">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-semibold text-gray-800 mb-6">Stay in Touch</h2>
+      <p class="text-lg text-gray-600 mb-10">Sign up to get the latest updates and exclusive content delivered straight to your inbox.</p>
+
+      <form class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+        <div class="mb-6">
+          <label for="name" class="block text-left text-gray-700 font-medium mb-2">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-800 focus:ring-2 focus:ring-orange-400 focus:outline-none transition">
+        </div>
+        <div class="mb-6">
+          <label for="email" class="block text-left text-gray-700 font-medium mb-2">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-800 focus:ring-2 focus:ring-orange-400 focus:outline-none transition">
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block text-left text-gray-700 font-medium mb-2">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message here" class="w-full border border-gray-300 rounded-lg py-3 px-4 text-gray-800 focus:ring-2 focus:ring-orange-400 focus:outline-none transition"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-orange-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-orange-600 transition duration-300">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-8">
+    <div class="max-w-4xl mx-auto text-center">
+      <p>&copy; 2024 
+        <a target="_blank" href="https://ondrejpacovsky.cz">Ondrej Pacovsky</a>. All rights reserved. #HighSeas 💖</p>
+    </div>
+  </footer>
+</body>
+</html>
