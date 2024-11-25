@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Template</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { cursor: none !important; }
+    html {scroll-behavior: smooth;}
+    #cursor {position: fixed;width: 16px;height: 16px;background-color: #ff5722;border-radius: 50%;pointer-events: none;z-index: 1000; transition: transform 0.1s ease-out, background-color 0.2s ease-in-out;}
+    #cursor.hovered {background-color: #cc4218;transform: scale(1.2);}
+    @media only screen and (max-width: 768px) {
+      #cursor {display: none;}* {cursor: auto !important;}
+      a:hover { cursor: pointer !important;}
+      nav {display: none !important;}}
+  </style>
+  
+  <script>;
+    document.addEventListener("DOMContentLoaded", () => {
+      const existingCursor = document.querySelector("#cursor");
+      if (existingCursor) {
+        existingCursor.remove();
+      }
+
+      const cursor = document.createElement("div");
+      cursor.id = "cursor";
+      document.body.appendChild(cursor);
+  
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      });
+
+      document.querySelectorAll("a, button, input, textarea, select").forEach((element) => {
+        element.addEventListener("mouseenter", () => cursor.classList.add("hovered"));
+        element.addEventListener("mouseleave", () => cursor.classList.remove("hovered"));
+      });
+    });
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cursor = document.createElement("div");
+      cursor.id = "cursor";
+      document.body.appendChild(cursor);
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+      });
+  
+      document.querySelectorAll("a, button, input, textarea, select").forEach((element) => {
+        element.addEventListener("mouseenter", () => cursor.classList.add("hovered"));
+        element.addEventListener("mouseleave", () => cursor.classList.remove("hovered"));
+      });
+    });
+  </script>
+  
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gray-800 shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#" class="text-3xl font-extrabold text-orange-500">Your Title</a>
+      <nav class="flex space-x-8">
+        <a href="#about" class="text-gray-300 hover:text-orange-400 transition">About</a>
+        <a href="#projects" class="text-gray-300 hover:text-orange-400 transition">Projects</a>
+        <a href="#contact" class="text-gray-300 hover:text-orange-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col justify-center items-center text-center px-4">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+      Hello, I'm <span class="text-orange-500">Your Name</span>
+    </h1>
+    <p class="text-lg md:text-2xl text-gray-300">
+        Lorem ipsum <span class="text-orange-400">dolor sit amet</span>, consectetur adipiscing elit. Mauris vel tincidunt nisi
+    </p>
+    <a href="#projects" class="mt-8 px-8 py-3 bg-orange-500 text-gray-100 font-semibold rounded-full shadow-lg hover:bg-orange-400 hover:shadow-xl transition">
+      See My Work
+    </a>
+  </section>
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-gradient-to-br from-gray-800 to-gray-900">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center underline underline-offset-8 decoration-orange-500 mb-8 mt-14">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12 justify-start ml-0 md:ml-24"> <!-- Změněno "justify-center" na "justify-start" -->
+      <img src="https://via.placeholder.com/200" alt="Your Image" class="w-48 h-48 rounded-full border-4 border-orange-500 shadow-lg">
+      <p class="text-center md:text-left text-lg text-gray-300 leading-relaxed max-w-3xl">
+        Ut ante neque, elementum vel ullamcorper dictum, auctor sed sem. Aliquam sed pretium dolor. Vivamus auctor, felis vel vulputate fermentum, orci ex vestibulum libero, sed accumsan enim diam at mi. Suspendisse vulputate bibendum enim, eu luctus diam vehicula non. Proin et erat suscipit, placerat ligula sit amet, dapibus orci.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gradient-to-br from-gray-800 to-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center underline underline-offset-8 decoration-orange-500 mb-8 mt-14">My Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+        <!-- Project 1 -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold text-gray-100 mb-2">Project Title 1</h3>
+          <p class="text-gray-300 mb-4">Ut ante neque, elementum vel ullamcorper dictum, auctor sed sem. Aliquam sed pretium dolor. Vivamus auctor, felis vel vulputate fermentum, orci ex vestibulum libero, sed accumsan enim diam at mi.</p>
+          <a href="#" class="text-orange-500 hover:text-orange-400 transition">View Project</a>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold text-gray-100 mb-2">Project Title 2</h3>
+          <p class="text-gray-300 mb-4">Ut ante neque, elementum vel ullamcorper dictum, auctor sed sem. Aliquam sed pretium dolor. Vivamus auctor, felis vel vulputate fermentum, orci ex vestibulum libero, sed accumsan enim diam at mi.</p>
+          <a href="#" class="text-orange-500 hover:text-orange-400 transition">View Project</a>
+        </div>
+        <!-- Project 3 -->
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="text-xl font-semibold text-gray-100 mb-2">Project Title 3</h3>
+          <p class="text-gray-300 mb-4">Ut ante neque, elementum vel ullamcorper dictum, auctor sed sem. Aliquam sed pretium dolor. Vivamus auctor, felis vel vulputate fermentum, orci ex vestibulum libero, sed accumsan enim diam at mi.</p>
+          <a href="#" class="text-orange-500 hover:text-orange-400 transition">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gradient-to-br from-gray-800 to-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center underline underline-offset-8 decoration-orange-500 mb-8">Contact Me</h2>
+      <form class="max-w-lg mx-auto space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-700 text-gray-100 rounded-lg focus:ring-2 focus:ring-orange-500">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-gray-700 text-gray-100 rounded-lg focus:ring-2 focus:ring-orange-500">
+        <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 bg-gray-700 text-gray-100 rounded-lg focus:ring-2 focus:ring-orange-500"></textarea>
+        <button type="submit" class="w-full px-6 py-3 bg-orange-500 text-gray-100 font-semibold rounded-lg shadow-lg hover:bg-orange-400 hover:shadow-xl transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-center text-gray-500">
+    <p>© 2024 <a target="_blank" href="https://ondrejpacovsky.cz">Ondrej Pacovsky</a>. All rights reserved. #HighSeas 💖</p>
+  </footer>
+
+  <!-- Cursor Functionality -->
+  <script>
+    const cursor = document.getElementById("cursor");
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    
+    const updateCursorPosition = () => {
+      cursor.style.transform = `translate(${mouseX - cursor.offsetWidth / 2}px, ${mouseY - cursor.offsetHeight / 2}px)`;
+    };
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      updateCursorPosition();
+    });
+
+    document.querySelectorAll("a, button, input, textarea").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        cursor.classList.add("hovered");
+      });
+    
+      el.addEventListener("mouseleave", () => {
+        cursor.classList.remove("hovered");
+      });
+    });
+
+    document.addEventListener("mousedown", () => {
+      cursor.classList.add("hovered");
+    });
+
+    document.addEventListener("mouseup", () => {
+      cursor.classList.remove("hovered");
+    });
+
+    setInterval(() => {
+      cursorX += (mouseX - cursorX) * 0.1;
+      cursorY += (mouseY - cursorY) * 0.1;
+      updateCursorPosition();
+    }, 16);
+  </script>
+</body>
+</html>
