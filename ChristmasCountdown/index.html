@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Countdown</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script>
+    function startCountdown() {
+      const targetDate = new Date('December 24, 2024 00:00:00').getTime();
+      const countdown = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+          clearInterval(countdown);
+          document.getElementById('countdown').innerHTML = "Merry Christmas! 🎁";
+        } else {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          document.getElementById('countdown').innerHTML = `
+            ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+      }, 1000);
+    }
+    window.onload = startCountdown;
+  </script>
+  <style>
+    .snowflake {
+        color: #fff;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+        text-shadow: 0 0 5px #000;
+    }
+    .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+
+    .christmas-lights {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      z-index: 5;
+      animation: blink 1.5s ease-in-out infinite alternate;
+    }
+
+    .light {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ff4747;
+      animation: changeColor 2s infinite ease-in-out alternate;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    .light:nth-child(odd) {
+      background-color: #ffdb00;
+    }
+
+    .light:nth-child(even) {
+      background-color: #00aaff;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes changeColor {
+      0% {
+        background-color: #ff4747;
+      }
+      50% {
+        background-color: #ffdb00;
+      }
+      100% {
+        background-color: #00aaff;
+      }
+    }
+
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+    <!-- Snowflakes -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+          <div class="inner">❅</div>
+        </div>
+      </div>
+
+  <!-- Lights -->
+  <div class="christmas-lights">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+  </div>
+
+  <div class="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-red-700 via-red-500 to-red-500 overflow-hidden">
+    <div class="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+    <div class="text-center text-white relative z-20 space-y-4">
+      <h1 class="text-5xl font-extrabold text-shadow-md">🎄 Christmas Countdown 🎅</h1>
+      <p class="text-2xl">Time left until Christmas:</p>
+      <div id="countdown" class="text-3xl font-bold my-6">Loading...</div>
+    </div>
+  </div>
+</body>
+</html>
