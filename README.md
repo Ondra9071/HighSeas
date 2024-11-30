@@ -9,3 +9,4 @@ Collection of my projects for <a href="https://highseas.hackclub.com/">highseas.
 | Portfolio Template  | HTML, TailwindCSS  | 25/11/2024  | [Here](https://github.com/Ondra9071/HighSeas-PortfolioTemplate)  |
 | Christmas Countdown  | HTML, TailwindCSS  | 25/11/2024  | [Here](https://github.com/Ondra9071/HighSeas-XmasCountdown)  |
 | Game Server Web Template  | PHP, TailwindCSS  | 26/11/2024  | [Here](https://github.com/Ondra9071/HighSeas-GameServerWebTemplate)  |
+| CLI Based Portfolio  | React, Typescript, TailwindCSS  | 28/11/2024  | [Here](https://github.com/Ondra9071/HighSeas-CliBasedPortfolio)  |
