@@ -12,3 +12,4 @@ Collection of my projects for <a href="https://highseas.hackclub.com/">highseas.
 | CLI Based Portfolio  | React, Typescript, TailwindCSS  | [Here](https://github.com/Ondra9071/HighSeas-CliBasedPortfolio)  | [Here](https://ondrejpacovsky.cz/demo/highseas/CliBasedPortfolio/index.html) |
 | Portfolio Template #2 | PHP, TailwindCSS  | [Here](https://github.com/Ondra9071/HighSeas-PortfolioTemplate2)  | [Here](https://ondrejpacovsky.cz/demo/highseas/PortfolioTemplate2/index.php) |
 | Planets Simulation | HTML, ThreeJS  | [Here](https://github.com/Ondra9071/HighSeas-PlanetsSimulation)  | [Here](https://ondrejpacovsky.cz/demo/highseas/PlanetsSimulation/index.html) |
+| FindYourCrypto🔍 |React, Typescript, TailwindCSS, ExpressJS  | [Here](https://github.com/Ondra9071/HighSeas-FindYourCrypto)  | [Here](https://ondrejpacovsky.cz/demo/highseas/FindYourCrypto/index.html) |
