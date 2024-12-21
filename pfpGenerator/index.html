@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HighSeas PFP Gen 🎄</title>
+  <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./snowflakes.css">
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center">
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+  </div>
+  <header class="w-full flex justify-center py-4">
+    <img src="./assets/logo.svg" alt="Logo" class="h-32">
+  </header>
+
+  <main class="flex-1 w-full flex flex-col items-center px-4">
+    <h1 class="text-3xl md:text-5xl font-bold mb-6 text-center">PFP Generator 🎄</h1>
+    <input id="upload" type="file" accept="image/*"
+      class="mb-6 p-2 bg-gray-800 rounded border border-gray-600 text-center w-full max-w-md">
+
+    <div class="mt-14 w-full">
+      <div class="flex flex-wrap justify-center gap-6 md:gap-14">
+        <div class="flex flex-col items-center">
+          <canvas id="canvas-slack" class="border border-gray-700 w-56 h-56 md:w-72 md:h-72 mb-4"></canvas>
+          <button id="download-slack"
+            class="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded flex items-center gap-2 hidden">
+            <i class="fas fa-download"></i>
+            Slack
+          </button>
+        </div>
+        <div class="flex flex-col items-center">
+          <canvas id="canvas-Square" class="border border-gray-700 w-56 h-56 md:w-72 md:h-72 mb-4"></canvas>
+          <button id="download-Square"
+            class="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded flex items-center gap-2 hidden">
+            <i class="fas fa-download"></i>
+            Square
+          </button>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <canvas id="canvas-rounded"
+            class="border border-gray-700 w-56 h-56 md:w-72 md:h-72 rounded-full mb-4"></canvas>
+          <button id="download-rounded"
+            class="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded flex items-center gap-2 hidden">
+            <i class="fas fa-download"></i>
+            Rounded
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full py-4 text-center text-sm text-gray-400 px-4">
+    &copy; <span id="year">YYYY</span> by <a target="_blank" href="https://ondrejpacovsky.cz/">Ondřej Pacovský</a> with 💖
+    for <a target="_blank" href="https://highseas.hackclub.com">HighSeas</a>,
+    All rights reserved.
+    Check out <a target="_blank" href="https://github.com/Ondra9071/HighSeas-PfpGenerator">Github Repo</a>!
+  </footer>
+  <script src="./script.js"></script>
+  <script src="./handle.js"></script>
+</body>
+
+</html>
