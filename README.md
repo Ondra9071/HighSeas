@@ -14,3 +14,4 @@ Collection of my projects for <a href="https://highseas.hackclub.com/">highseas.
 | Planets Simulation | HTML, ThreeJS  | [Here](https://github.com/Ondra9071/HighSeas-PlanetsSimulation)  | [Here](https://ondrejpacovsky.cz/demo/highseas/PlanetsSimulation/index.html) |
 | FindYourCrypto🔍 |React, Typescript, TailwindCSS, ExpressJS  | [Here](https://github.com/Ondra9071/HighSeas-FindYourCrypto)  | [Here](https://ondrejpacovsky.cz/demo/highseas/FindYourCrypto/index.html) |
 | PFP Generator |HTML, JS, TailwindCSS | [Here](https://github.com/Ondra9071/HighSeas-PfpGenerator)  | [Here](https://hs-pfpgen.ostv.cz/) |
+| Pixel Art Editor 🎨 |HTML, JS, TailwindCSS | [Here](https://github.com/Ondra9071/HighSeas-PixelArtEditor)  | [Here](https://ondrejpacovsky.cz/demo/highseas/PixelArtEditor/index.html) |
