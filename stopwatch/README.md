@@ -7,7 +7,7 @@ Simple stopwatch made with **React**, **Typescript** and **TailwindCSS**!
 ![Preview](https://ondrejpacovsky.cz/demo/highseas/Stopwatch/preview.jpg)
 
 # Setup 
-# 1) Clone repo
+## 1) Clone repo
 ```
 git clone https://github.com/Ondra9071/HighSeas-Stopwatch.git
 ```
